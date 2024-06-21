@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sutton</title>
+    <link rel="icon" type="image/png" href="rock.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .model-card {
+            border-top: 1px solid #e5e7eb;
+            padding: 1rem 0;
+            cursor: pointer;
+        }
+
+        .model-card:hover .model-card-title {
+            text-decoration: underline;
+        }
+
+        .model-card-title {
+            font-weight: bold;
+        }
+
+        .model-card-description {
+            margin-top: 0.5rem;
+        }
+
+        .model-card-tags {
+            margin-top: 0.5rem;
+        }
+
+        .model-card-tags span {
+            background-color: rgba(59, 130, 246, 0.2);
+            color: #3b82f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            margin-right: 0.25rem;
+            font-size: 0.75rem;
+        }
+
+        .model-card-stats {
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .reduce-margin {
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .gallery-item-title {
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        main {
+            margin-top: 0;
+            padding-top: 0;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .model-card:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            var navItems = document.getElementById("nav-items");
+            navItems.classList.toggle("hidden");
+        }
+
+        function openInNewTab(href) {
+            window.open(href, '_blank');
+        }
+    </script>
+</head>
+
+<body class="bg-white text-gray-900 font-sans">
+    <header class="bg-white py-4 px-6 lg:px-32 xl:px-64">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold">Sutton</a>
+            <div class="lg:hidden">
+                <button onclick="toggleMenu()" class="text-gray-900 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="hidden lg:flex items-center space-x-4">
+                <a href="https://sutton-2.gitbook.io/notes" class="hover:text-gray-600" target="_blank">Notes</a>
+                <a href="https://github.com/suttonn-suu" class="hover:text-gray-600" target="_blank">GitHub</a>
+            </nav>
+        </div>
+        <nav class="lg:hidden hidden mt-4" id="nav-items">
+            <ul class="flex flex-col space-y-2">
+                <li>
+                    <a href="https://sutton-2.gitbook.io/notes" class="hover:text-gray-600" target="_blank">Notes</a>
+                </li>
+                <li>
+                    <a href="https://github.com/suttonn-suu" class="hover:text-gray-600" target="_blank">GitHub</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="px-6 lg:px-32 xl:px-64 mt-4">
+        <section class="text-left">
+            <h1 class="text-3xl font-bold mb-2">AI Repository</h1>
+            <p class="mb-4 text-lg">
+                The models are available for non-commercial use. For AI creation services, <a
+                    href="mailto:ssutton.box@gmail.com" class="text-blue-500 underline">contact me</a> to discuss your
+                needs and create a custom model.
+            </p>
+        </section>
+        <section>
+            <div onclick="openInNewTab('https://github.com/suttonn-suu/trading-ai-bot')" class="model-card" target="_blank">
+                <div class="model-card-title">Trading AI Bot</div>
+                <div class="model-card-description">Trading AI Bot with advanced artificial intelligence, capable of
+                    carrying out operations in the financial markets autonomously and efficiently.</div>
+                <div class="model-card-tags">
+                    <span>8kb</span>
+                    <span>9gb</span>
+                </div>
+                <div class="model-card-stats">
+                    June 21, 2024 | Sutton
+                </div>
+            </div>
+            <div onclick="openInNewTab('https://github.com/suttonn-suu/ai-autonomous-driving')" class="model-card" target="_blank">
+                <div class="model-card-title">AI Autonomous Driving</div>
+                <div class="model-card-description">AI model for autonomous vehicles through advanced artificial
+                    intelligence, making an AI model able to drive cars.</div>
+                <div class="model-card-tags">
+                    <span>5kb</span>
+                    <span>3gb</span>
+                </div>
+                <div class="model-card-stats">
+                    June 21, 2024 | Sutton
+                </div>
+            </div>
+            <div onclick="openInNewTab('https://github.com/suttonn-suu/ai-llm-model')" class="model-card" target="_blank">
+                <div class="model-card-title">AI LLM Model</div>
+                <div class="model-card-description">Large-scale language model with advanced artificial intelligence,
+                    designed to understand and generate text with exceptional capability in a wide range of contexts and
+                    applications.</div>
+                <div class="model-card-tags">
+                    <span>10kb</span>
+                    <span>1gb</span>
+                </div>
+                <div class="model-card-stats">
+                    June 21, 2024 | Sutton
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-white shadow-md py-4 px-6 lg:px-32 xl:px-64">
+        <div
+            class="container mx-auto flex flex-col items-center lg:flex-row lg:justify-between lg:items-center space-y-4 lg:space-y-0">
+            <div class="text-center lg:text-left">Made by Sutton</div>
+            <nav>
+                <ul class="flex flex-col items-center sm:flex-row sm:space-x-4">
+                    <li>
+                        <a href="mailto:ssutton.box@gmail.com" class="hover:underline mt-2 sm:mt-0">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
